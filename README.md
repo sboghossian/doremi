@@ -10,18 +10,18 @@ Doremi turns hand motion into music. A local-first desktop instrument that watch
 
 ## Monorepo
 
-| Folder | What |
-|---|---|
-| [`apps/landing`](apps/landing) | Public landing page → [doremi.dashable.dev](https://doremi.dashable.dev) |
-| [`apps/os`](apps/os) | The local Doremi OS app — Tauri (Rust + Web) desktop instrument |
-| [`bricks`](bricks) | Community-contributable gesture packs, sound packs, skill mappings, song presets |
-| [`docs`](docs) | Architecture, brick spec, the original Notion brain-dump |
-| [`tasks`](tasks) | Living todo / roadmap |
+| Folder                         | What                                                                             |
+| ------------------------------ | -------------------------------------------------------------------------------- |
+| [`apps/landing`](apps/landing) | Public landing page → [doremi.dashable.dev](https://doremi.dashable.dev)         |
+| [`apps/os`](apps/os)           | The local Doremi OS app — Tauri (Rust + Web) desktop instrument                  |
+| [`bricks`](bricks)             | Community-contributable gesture packs, sound packs, skill mappings, song presets |
+| [`docs`](docs)                 | Architecture, brick spec, the original Notion brain-dump                         |
+| [`tasks`](tasks)               | Living todo / roadmap                                                            |
 
 ## How it works (vision)
 
 1. **Record** — Drop a Spotify link, hit record, move freely. Doremi captures your hands (MediaPipe, 21 finger joints), the audio you play, and the song's structure.
-2. **Learn** — A local model (Ollama) clusters your gestures unsupervised and proposes mappings — *"bind a pinch to a snare?"*
+2. **Learn** — A local model (Ollama) clusters your gestures unsupervised and proposes mappings — _"bind a pinch to a snare?"_
 3. **Perform** — Two hands, two instruments simultaneously, < 50 ms latency. MIDI out to your DAW. Or play the built-in soundfont library.
 
 ## The brick model

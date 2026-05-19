@@ -1,69 +1,42 @@
 # Doremi OS
 
-The local desktop app. macOS first. Tauri (Rust core + Web frontend).
+The local desktop app. Tauri v2 (Rust core + Vanilla TS frontend). macOS first.
 
-> **Status:** Not yet scaffolded. Architecture frozen, code coming next.
+For the architecture, latency budget, and stack rationale, see [ARCHITECTURE.md](ARCHITECTURE.md).
 
-## Architecture
-
-```
-┌─────────────────────────────────────────────────┐
-│  Tauri shell (Rust)                             │
-│  ├─ Window, menu, file I/O                      │
-│  ├─ AVFoundation camera (macOS)                 │
-│  ├─ CoreAudio output, low-latency thread        │
-│  ├─ Soundfont engine (oxisynth or similar)      │
-│  ├─ MIDI out (coremidi)                         │
-│  ├─ Brick loader (file watcher on ~/Doremi/bricks/) │
-│  └─ Ollama HTTP client                          │
-├─────────────────────────────────────────────────┤
-│  WebView (TypeScript + Vite)                    │
-│  ├─ MediaPipe Hands (21 joints, 30+ FPS)        │
-│  ├─ Studio view (live performance)              │
-│  ├─ Record view (Spotify embed + capture)       │
-│  ├─ Brick browser & editor                      │
-│  └─ Skill review UI (post-session)              │
-├─────────────────────────────────────────────────┤
-│  Ollama (separate process)                      │
-│  └─ Post-session gesture clustering & analysis  │
-└─────────────────────────────────────────────────┘
-```
-
-## Why Tauri (not Electron, not native Swift)
-
-| | Tauri | Electron | Native Swift |
-|---|---|---|---|
-| Audio latency | ✅ Rust thread, < 10 ms | ❌ JS event loop | ✅ Best |
-| Hand tracking | ✅ MediaPipe.js | ✅ MediaPipe.js | ⚠️ CoreML port |
-| Community contribs | ✅ TS bricks | ✅ TS bricks | ❌ Swift only |
-| Cross-platform later | ✅ Free | ✅ Free | ❌ Locked in |
-| Bundle size | ✅ ~15 MB | ❌ ~150 MB | ✅ ~10 MB |
-
-## Setup (when scaffolded)
+## Quickstart
 
 ```bash
-# Prereqs: Rust toolchain, Node, pnpm
-rustup --version  # 1.70+
-node --version    # 18+
-
-cd apps/os
+# Prereqs: Rust 1.70+, Node 18+, pnpm
 pnpm install
 pnpm tauri dev
 ```
 
-Coming in the next phase. See [`tasks/todo.md`](../../tasks/todo.md) phase 2.
+This opens a development window with hot-reload on the frontend (Vite) and the Rust backend (recompile on save).
 
-## Latency budget
+## Build
 
-End-to-end target: **< 50 ms** from gesture to sound.
+```bash
+pnpm tauri build
+# Output: src-tauri/target/release/bundle/macos/Doremi.app
+```
 
-| Stage | Budget |
-|---|---|
-| Camera capture (30 FPS) | ~16 ms |
-| MediaPipe inference | ~10 ms |
-| Gesture classification (on-device) | ~5 ms |
-| Tauri IPC → Rust audio thread | ~2 ms |
-| Soundfont synth + CoreAudio | ~10 ms |
-| **Total** | ~43 ms |
+## Layout
 
-Achievable. Native synths can do <10 ms. The variable is MediaPipe — depends on whether we use the lite or full model.
+```
+apps/os/
+├── src/                # Vanilla TS frontend (will host MediaPipe Hands, Studio/Record views)
+├── src-tauri/          # Rust core (audio engine, brick loader, MIDI, camera)
+├── ARCHITECTURE.md     # Why Tauri, latency budget, full system diagram
+├── package.json        # Frontend deps
+└── tsconfig.json
+```
+
+## What's coming
+
+See [`../../tasks/todo.md`](../../tasks/todo.md) phases 2–5 for the buildout plan:
+
+- **Phase 2** — Tauri shell, camera permission, MediaPipe Hands integration, basic soundfont playback
+- **Phase 3** — Record session view with Spotify embed + capture stream
+- **Phase 4** — Brick loader (`~/Doremi/bricks/`)
+- **Phase 5** — Ollama integration for post-session gesture clustering

@@ -4,12 +4,12 @@ Community-contributable extensions. Drop one in `~/Doremi/bricks/` (user-local) 
 
 ## Types
 
-| Type | What it does | Folder |
-|---|---|---|
-| `gesture-pack` | Defines recognizable hand gestures (MediaPipe landmarks) | `gestures/` |
-| `sound-pack` | Audio samples or a soundfont | `sounds/` |
-| `skill` | Maps a `gesture-pack` to a `sound-pack` (a playable instrument) | `skills/` |
-| `song-preset` | Spotify URL + recommended skill + tempo | `songs/` |
+| Type           | What it does                                                    | Folder      |
+| -------------- | --------------------------------------------------------------- | ----------- |
+| `gesture-pack` | Defines recognizable hand gestures (MediaPipe landmarks)        | `gestures/` |
+| `sound-pack`   | Audio samples or a soundfont                                    | `sounds/`   |
+| `skill`        | Maps a `gesture-pack` to a `sound-pack` (a playable instrument) | `skills/`   |
+| `song-preset`  | Spotify URL + recommended skill + tempo                         | `songs/`    |
 
 See [CONTRIBUTING.md](../CONTRIBUTING.md) for the brick manifest schema.
 

@@ -9,9 +9,11 @@ Distilled from `notion-export.md` on 2026-05-19. The brain dump lived from 2024-
 Doremi is conceived as a "motion-powered music maker" — a digital musical instrument that transforms body movements and gestures into music via customizable "motion hands," letting a single user play many instruments at once across a 360° space divided into instrument environments.
 
 Verbatim:
+
 > "DoReMi is a revolutionary music instrument company designed to enable simultaneous music creation with multiple instruments. It features customizable motion hands, divided environments for instruments, and capabilities like broadcasting music, recording voice-over-the-music, and connecting to external devices."
 
 Emotional/launch voice:
+
 > "an extension of your artistic soul... Every gesture you make... comes alive as a melody, a beat, or a harmony"
 > "for anyone who feels music in their bones... Whether you're dancing, walking, or even standing still."
 
@@ -26,14 +28,14 @@ Emotional/launch voice:
 
 The only place Stephane is thinking out loud (not auto-generating template):
 
-1. **Per-gesture, per-note customization** — *"motion hands can be customized for every musical note from an instrument, you previously record or download from public sources"*
-2. **360° spatial zones** — *"environment surrounding you 360 is divided into multiple instruments"* ← most distinctive
+1. **Per-gesture, per-note customization** — _"motion hands can be customized for every musical note from an instrument, you previously record or download from public sources"_
+2. **360° spatial zones** — _"environment surrounding you 360 is divided into multiple instruments"_ ← most distinctive
 3. **Broadcasting & remote-live sessions**
 4. **Voice-over with effects** via embedded mic
 5. **Open-source content marketplace** for notes, lyrics, instruments
 6. **Universal export** to any format/platform
 7. **External device control** (implies MIDI/IoT)
-8. **Environmental data sonification** ⚠️ — *"Automatically create music from the data collected from your environment"* — buried, never expanded, the most novel thread
+8. **Environmental data sonification** ⚠️ — _"Automatically create music from the data collected from your environment"_ — buried, never expanded, the most novel thread
 9. **Real-time editing tools**
 10. **Mobile companion app**
 
@@ -41,21 +43,21 @@ The only place Stephane is thinking out loud (not auto-generating template):
 
 - **DoReMi / Do.Re.Mi** — primary, icon 🪕
 - **MusicBox** — earliest working name, discarded
-- **DO • RE • MO** — concept render variant, tied to tagline *"MO is Feel music your way"*
+- **DO • RE • MO** — concept render variant, tied to tagline _"MO is Feel music your way"_
 - **DO • Re • MI** — variant on device render (literal solfège)
 
 → **v1 locked: DO • RE • MO** (pending one-word confirm from Stephane vs MI)
 
 ## 5. Aesthetic signals (concept-render prompt)
 
-- *"sleek, cylindrical smart music player device with a matte light gray body, soft, rounded dome top"*
-- *"circular touch-sensitive display glowing with a pastel gradient (purple, pink, yellow)"*
-- *"tactile metallic band wraps around the middle, resembling a speaker mesh"*
-- *"modern sans-serif font, clean and minimalistic in a gradient light gray, shot with soft studio lighting and no shadows"*
+- _"sleek, cylindrical smart music player device with a matte light gray body, soft, rounded dome top"_
+- _"circular touch-sensitive display glowing with a pastel gradient (purple, pink, yellow)"_
+- _"tactile metallic band wraps around the middle, resembling a speaker mesh"_
+- _"modern sans-serif font, clean and minimalistic in a gradient light gray, shot with soft studio lighting and no shadows"_
 
 Territory: **Apple / Teenage Engineering minimalism.** Note: the render shows a smart-speaker form factor, not a wearable — hardware form is unsettled.
 
-Brand emotional arc (user-journey doc): *Curiosity → Eagerness → Accomplishment → Inspiration → Pride.*
+Brand emotional arc (user-journey doc): _Curiosity → Eagerness → Accomplishment → Inspiration → Pride._
 
 ## 6. Personas declared
 
@@ -64,18 +66,18 @@ Brand emotional arc (user-journey doc): *Curiosity → Eagerness → Accomplishm
 - Content creators / social-media influencers (real-time production)
 - DJs
 - Music schools & online learning platforms
-- Launch copy goes broader: *"anyone who feels music in their bones."*
+- Launch copy goes broader: _"anyone who feels music in their bones."_
 
-Accessibility hinted but never made explicit — *"Traditional instruments are expensive and difficult to learn"* is the closest.
+Accessibility hinted but never made explicit — _"Traditional instruments are expensive and difficult to learn"_ is the closest.
 
 ## 7. Competitors & prior art named
 
-| Player | What Stephane wrote |
-|---|---|
-| **Roli** (Seaboard, Blocks) | *"focused on tactile, touch-based music creation. DoReMi differentiates by emphasizing motion-based control and hands-free creation."* |
-| **Ableton Live** | *"a more immersive, real-time, and accessible interface that doesn't require traditional equipment."* |
-| **Artiphon** | *"all-in-one instruments... DoReMi's edge is in its motion-controlled interface and broadcast/voice-over features."* |
-| **MiMu Gloves** (Imogen Heap) | *"High-end wearable technology... DoReMi offers a more affordable, mass-market product."* |
+| Player                        | What Stephane wrote                                                                                                                    |
+| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| **Roli** (Seaboard, Blocks)   | _"focused on tactile, touch-based music creation. DoReMi differentiates by emphasizing motion-based control and hands-free creation."_ |
+| **Ableton Live**              | _"a more immersive, real-time, and accessible interface that doesn't require traditional equipment."_                                  |
+| **Artiphon**                  | _"all-in-one instruments... DoReMi's edge is in its motion-controlled interface and broadcast/voice-over features."_                   |
+| **MiMu Gloves** (Imogen Heap) | _"High-end wearable technology... DoReMi offers a more affordable, mass-market product."_                                              |
 
 Potential acquirers named: Yamaha, Ableton, Native Instruments.
 Ecosystem partners named: Oculus, Magic Leap.
@@ -92,8 +94,8 @@ Distribution targets: TikTok, YouTube.
 
 ## 9. Critical risk Stephane already flagged to himself
 
-- **Load-bearing assumption:** *"Users will embrace motion-based music tools."*
-- **Risk areas:** *"Technical reliability, user adoption, legal/IP issues."*
+- **Load-bearing assumption:** _"Users will embrace motion-based music tools."_
+- **Risk areas:** _"Technical reliability, user adoption, legal/IP issues."_
 
 ## 10. What's missing from the dump (gaps the v1 build must close)
 
