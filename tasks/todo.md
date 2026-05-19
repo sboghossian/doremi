@@ -10,20 +10,26 @@ Living plan. Updated 2026-05-19.
 - [x] Ask 25 scoping questions
 - [x] Lock v1 decisions (camera-only, macOS, Tauri, MIT, DO • Re • MI, parallel build)
 
-## 🟡 Phase 1 — Foundation (in progress)
+## ✅ Phase 1 — Foundation
 
 - [x] Monorepo skeleton (`apps/`, `bricks/`, `docs/`, `tasks/`)
 - [x] Root README + LICENSE (MIT) + CONTRIBUTING (brick spec) + .gitignore
 - [x] Landing page first cut (`apps/landing/index.html`)
-- [ ] Three-wave logo finalized (SVG, multiple sizes)
-- [ ] `git init` + first commit
-- [ ] GitHub remote (needs Stephane: org/handle + repo name confirm)
-- [ ] Deploy landing to doremi.dashable.dev (needs Stephane: hosting access)
+- [x] Three-wave logo (inline SVG)
+- [x] `git init` + first commit
+- [x] GitHub remote: [github.com/sboghossian/doremi](https://github.com/sboghossian/doremi)
+- [x] Cloudflare Pages project `doremi` created
+- [x] Landing deployed: [doremi-1wu.pages.dev](https://doremi-1wu.pages.dev)
+- [ ] **Stephane:** attach `doremi.dashable.dev` custom domain via Cloudflare dashboard (30-sec step)
+- [ ] Favicon + OG image
+- [ ] Wire email-capture to real backend (later)
 
-## ⚪ Phase 2 — OS app v0 (next)
+## 🟡 Phase 2 — OS app v0 (in progress)
 
-- [ ] Verify Rust toolchain installed (`rustup`, `cargo`)
-- [ ] `pnpm create tauri-app` under `apps/os` (template: vanilla TS)
+- [x] Rust 1.95 installed via rustup
+- [x] Tauri v2 scaffolded at `apps/os` (vanilla-ts, identifier `dev.dashable.doremi-os`)
+- [x] `pnpm install` complete
+- [ ] First smoke test: `pnpm tauri dev` opens a window
 - [ ] Tauri app shell: window, dev server, system permissions
 - [ ] Camera permission + webcam feed (AVFoundation via Tauri)
 - [ ] MediaPipe Hands integration → live hand skeleton overlay
